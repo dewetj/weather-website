@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit',(e)=>{
     messageTwo.textContent = '';
 
     //fetch is only used in client side javascript
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageOne.textContent = data.error;
